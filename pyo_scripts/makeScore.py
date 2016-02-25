@@ -27,5 +27,6 @@ for elt in inputList:
     else:
         t.insert(Snare, pos=elt[1])
 
-t.view()
+freq = t.getRate()
+a = Osc(table=t, freq=[freq, freq*.995], mul=.3).out()
 s.gui(locals())
