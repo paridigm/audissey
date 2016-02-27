@@ -2,7 +2,7 @@
 script to record data and save it into a buffer.
 
 call _r() to start recording
-call _p() to stop recording and playback the recording 
+call _p() to stop recording and playback the recording
 
 '''
 
