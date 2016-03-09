@@ -1,10 +1,13 @@
-
 from pyo import *
+import time
 
 s = Server().boot()
 s.start()
 
-a = Sine(mul=0.01).out() # why does sine.play() not work?
+a = Sine(mul=0.05).out() # why does sine.play() not work?
+
+time.sleep(2)
+s.stop()
 
 s.gui(locals())
 
