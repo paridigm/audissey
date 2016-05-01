@@ -59,3 +59,84 @@ n = input("Done:")
 if n.strip() == "y":
 break
 '''
+
+
+'''
+sign in
+load the class --> .wav map (contains the class labels for all the sounds you want to use) (any possible # of classes)
+
+main loop {
+
+ record: (ENTER for record, "filename" for file, "train" to train)
+
+ if(train)
+    select which sound you wish you train (class/sound map) - enter sound name
+    record: (ENTER for record, "filename" for file)
+ else
+ if(record)
+    do recording
+    save recording as new wav - store it w/ unique ID for later use
+
+ //either way, process
+ process() --> segment and extract features
+
+ if(train)
+    append data to user_data with label for desired class
+ else
+ if(record)
+    classify using training data
+
+ playback()
+
+}
+'''
+
+'''
+get user name (this will be for saving all data)
+
+main loop {
+
+ record or load a wav
+
+ if(wav loaded)
+    upload saved onsets
+
+ if(recorded)
+    save recording as new wav - store it w/ unique ID for later use
+
+ // by now we have a file no matter what...
+
+ process() --> segment and extract features
+
+ ### process unknown data ###
+ cluster_labels = [peaks.size] --> in audissey core
+ class_labels = [peaks.size]   --> in audissey core
+ for each sound
+    if(sound is unclustered)
+        playback sound --> requires saving wav file
+        get class label from user
+        label cluster of all other sounds of that cluster with the input label
+
+ if(user data is available)
+    classify w/ users data
+
+ problem: the unclustered data isn't matched with the labeled class :o
+}
+'''
+
+##########################
+
+'''
+auds.openwav("beatbox_sample3.wav")
+
+playback_thread = threading.Thread(target=auds.playback)
+playback_thread.start()
+
+auds.process()
+auds.save_unclassified_data()
+auds.show_visual()
+'''
+
+# OR test it with auds.main_local("./server/")
+
+# do same with a GUI

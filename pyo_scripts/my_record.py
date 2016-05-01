@@ -5,7 +5,6 @@ call _r() to start recording
 call _p() to stop recording and playback the recording
 '''
 
-
 from pyo import *
 
 s = Server().boot()
@@ -18,11 +17,11 @@ buf = NewTable(length = MAX_TIME, chnls = 2 )
 
 # Table is different that these, cannot "out()" a buffer...
 rec = TableRec(mic, table=buf)                #recorder object that fills in a buffer
-playback = TableRead(buf, freq=1.0/MAX_TIME)  #reader object that can play a buffer 
+playback = TableRead(buf, freq=1.0/MAX_TIME)  #reader object that can play a buffer
 
 # Oscilloscope and spectrum analyzer
 scope = Scope(mic)
-spec = Spectrum(playback, size=1024)
+#spec = Spectrum(playback, size=1024)
 
 
 print(SNDS_PATH)
@@ -44,8 +43,6 @@ def plot():
 IDEA for plotting:
     convert value into a control signal --> send control signal value to a live plotter window thing
     (Hopefully this will work!)
-
-
 
     need to grab features for classification
         - try MFCC's --> backup = spectral centroid + freaqnecy

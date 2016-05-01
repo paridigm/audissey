@@ -6,21 +6,29 @@
 #   - feature extraction
 #   - saving data to files
 #
-# also a singleton file ('fake singleton class') makes threading simple
+# also a singleton file ('fake singleton class with global vars') makes threading simple
 #
 #####
 
 import wave
 
 import matplotlib.pyplot as plt
-import numpy as np                  # plotting waveforms
-import pyaudio                      # playback
-import scipy.signal as signal       # smoothing
+import numpy as np                      # plotting waveforms
+import pyaudio                          # playback
+import scipy.signal as signal           # smoothing
 from scipy.io import wavfile
 
+import pyo_playback
+
+from util import signal_utils as su       # fix for spyder
+from util import feature_utils as fu      # ""
+from util import onsetdetect_hfc as odhf  # ""
+
+'''
 import util.signal_utils as su
 import util.feature_utils as fu
 import util.onsetdetect_hfc as odhf
+'''
 
 
 ################### vars ######################
@@ -30,9 +38,10 @@ gen_plots = False
 stop_rec = False
 
 # sounds variables
-snds_path = "./my_sounds/"           # location of sample wav files
+snds_path = "./sounds/"           # location of sample wav files
 data_path = "./data/"                # location of training data
 user_data_path = "./data/user/"       # location of training data
+user = None
 file_str = None                      # file to open
 
 # current wav file vars
@@ -59,9 +68,14 @@ FFT_BUFF = 512              # MFCC FFT size
 FFT_STEP = FFT_BUFF/2       # how much the MFCC window traverses per read
 FFT_MULT = 3                # minimum spacing from peaks (multiples of FFT_BUFF)
 
-# feature vector
-mfccs = (1, 5)
-X = []
+# data
+mfccs = (1, 5)  # desired MFCC's in the output
+X = []          # feature vector mxn - numpy array
+d = []          # data vector (classes of each sound) - python list
+
+'''
+
+'''
 
 ####################  FUNCTIONS  ##########################
 
@@ -82,11 +96,18 @@ def process():
 # ------------------------------------------------------------
 
 """ set both data and sound path """
-def set_default_path(rel_path):
+def set_default_path(rel_path, pyo_server):
     global snds_path, data_path, user_data_path
-    snds_path = rel_path + "my_sounds/"
+    snds_path = rel_path + "sounds/"
     data_path = rel_path + "data/"
     user_data_path = rel_path + "data/user/"
+
+    pyo_playback.set_pyo_server(pyo_server)
+
+    # initialize pyo_plaback lib
+    pyo_playback.load_samples_from([rel_path + "samples/bass_sample.wav",
+                                    rel_path + "samples/hihat_sample.wav",
+                                    rel_path + "samples/snare_sample.wav"])
 
 
 def set_data_path(data_path_str): # set data path only
@@ -104,6 +125,9 @@ def set_snd_path(snd_path_str): # set sound path only
     snds_path = snd_path_str
 
 
+def set_user(user_name):
+    global user
+    user = user_name
 
 
 def get_snd_path():
@@ -119,6 +143,11 @@ def get_data_path():
 def get_user_data_path():
     global user_data_path
     return user_data_path
+
+
+def get_user():
+    global user
+    return user
 
 
 def record_stop():
@@ -238,7 +267,10 @@ def extract_features_from_signal():
         X.append(features)
 
     #endfor
+
+    # convert to numpy array
     X = np.array(X)
+    1 == 1  # breakpoint
 
 
 def save_unclassified_data():
@@ -251,14 +283,14 @@ def save_unclassified_data():
     np.savetxt(data_path + file_out_str + "data.csv", X_non, fmt='%10f', delimiter='\t')
 
 
-def save_user_training_data(class_training, user):
+def save_user_training_data(class_training):
     global X, user_data_path
 
     # set data to desired class
     X_cls = np.column_stack( (np.full(np.shape(X)[0], class_training, dtype=np.int), X) )
 
     # append to tom training data
-    f=open( get_user_data_path() + user + ".csv",'ab')
+    f=open( get_user_data_path() + get_user() + ".csv",'ab')
     np.savetxt(f, X_cls, fmt='%10f', delimiter='\t')
     f.write("\n")
     f.close()
@@ -459,6 +491,30 @@ def show_visual():
         plt.show()
 
 
+def classify():
+    global X, d, user_data_path
+    return
+
+
+""" pyo playback function """
+def playback_with_pyo():
+    global peaks, d, fs
+
+    # scale peaks to time-domain
+    peaks_time_scaled = [ float(x)/fs for x in peaks]
+
+    # check if data is legitimate
+    if(len(d) != len(peaks)):
+        d = [1]*len(peaks)
+
+    print("playing back with pyo")
+    print(d)
+    print(peaks_time_scaled)
+
+    pyo_playback.play_song(d, peaks_time_scaled)
+
+    print("done with pyo payback")
+
 ############################################################
 
 # runs twice if called locally - not sure why
@@ -479,7 +535,7 @@ def main_local(rel_path):
 
     # init vars
     file_str = "beat_boxing_sample.wav"
-    snds_path = rel_path + "my_sounds/"
+    snds_path = rel_path + "sounds/"
     data_path = rel_path + "data/"
 
     # ---------------------- get data --------------------------------

@@ -1,14 +1,29 @@
+import context  # for spyder... since the project dir isn't known
 import os.path
 import server as auds
 import threading
+from pyo import *
 
-auds.set_default_path("./server/")
+# pyo had to be instanitated in main
+pyo_server = Server().boot()
 
+# initialize server by giving it its relative path
+auds.set_default_path("./server/", pyo_server)
+
+# work around for python3.4 in sdyper
+try:
+    raw_input
+except:
+    raw_input = input
+
+# program vars
 done = False
 current_file = None
 
+# get user
 user = raw_input("Enter user name : ")
 user = "default" if(user == '') else user
+auds.set_user(user)
 
 
 # command line gui for now
@@ -20,6 +35,11 @@ while(not done):
 
     class_training = None  # this will be the class label under training if training
 
+    # exit program condition
+    if(ans == "exit"):
+        done = True
+        break
+    
     # if training --> set training class and ask again
     if(ans == "t" or ans == "train" or ans == "tr"):
         class_training = raw_input("Enter class to train: ")
@@ -29,13 +49,17 @@ while(not done):
     # if playback, just playback and ask again..
     if(ans == "r" or ans == "replay" or ans =="play" or ans == "p"):
 
-        auds.openwav(current_file + ".wav")    # fix for default (but shudnt need re-opening...)
+        # playback the current wav
+        auds.openwav(current_file + ".wav")     # reopening wav was fix for default (but shudnt need re-opening... idk)
         playback_thread = threading.Thread(target=auds.playback)
         playback_thread.start()
 
-        while(playback_thread.isAlive()):  # printing (same duration every time)
-            #print("... playing back")      # suggests that thread is at least alive
+        while(playback_thread.isAlive()):
             pass
+
+        # playback the transcribed audio after actual playback (blocking function)
+        auds.playback_with_pyo()
+
         continue
 
     # if file doesn't exist or recording new wav...
@@ -66,105 +90,26 @@ while(not done):
     # segment and extract features
     auds.process()
 
-
     # save data
     auds.save_unclassified_data()
     print("***data saved ***")
 
     if(class_training != None):
         #training
-        auds.save_user_training_data(class_training, user)
+        auds.save_user_training_data(class_training)
     else:
         #jamming - classify by uploading the training data
         pass
 
-    # playback the transcribed audio
+    while( playback_thread.isAlive() ):
+            pass
 
+    # playback the transcribed audio after actual playback
+    auds.playback_with_pyo()
 
-    # start a plot thread (ok, only the first thread will actually stay alive forever)
+    # start a plot thread (ok to recreate... only the first thread will actually stay alive forever)
     vis_thread = threading.Thread(target=auds.show_visual)
     vis_thread.start()
 
+
 #end while, main loop
-
-
-'''
-sign in
-load the class --> .wav map (contains the class labels for all the sounds you want to use) (any possible # of classes)
-
-main loop {
-
- record: (ENTER for record, "filename" for file, "train" to train)
-
- if(train)
-    select which sound you wish you train (class/sound map) - enter sound name
-    record: (ENTER for record, "filename" for file)
- else
- if(record)
-    do recording
-    save recording as new wav - store it w/ unique ID for later use
-
- //either way, process
- process() --> segment and extract features
-
- if(train)
-    append data to user_data with label for desired class
- else
- if(record)
-    classify using training data
-
- playback()
-
-}
-'''
-
-
-
-'''
-get user name (this will be for saving all data)
-
-main loop {
-
- record or load a wav
-
- if(wav loaded)
-    upload saved onsets
-
- if(recorded)
-    save recording as new wav - store it w/ unique ID for later use
-
- // by now we have a file no matter what...
-
- process() --> segment and extract features
-
- ### process unknown data ###
- cluster_labels = [peaks.size] --> in audissey core
- class_labels = [peaks.size]   --> in audissey core
- for each sound
-    if(sound is unclustered)
-        playback sound --> requires saving wav file
-        get class label from user
-        label cluster of all other sounds of that cluster with the input label
-
- if(user data is available)
-    classify w/ users data
-
- problem: the unclustered data isn't matched with the labeled class :o
-}
-'''
-
-##########################
-
-auds.openwav("beatbox_sample3.wav")
-
-playback_thread = threading.Thread(target=auds.playback)
-playback_thread.start()
-
-auds.process()
-auds.save_unclassified_data()
-auds.show_visual()
-
-# OR test it with auds.main_local("./server/")
-
-
-# do same with a GUI

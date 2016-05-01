@@ -19,6 +19,7 @@ REL_TIME = .1               # Time to wait before reporting a new attack
 
 # Input sound table
 snd = SndTable(SND_PATH, chnl=1)
+
 # triggers table (length is the same as sound table)
 trig_table = NewTable(length=snd.getDur())
 
@@ -27,6 +28,7 @@ if INPUT == "snd":
     inp = TableRead(snd, snd.getRate()).out()
 else:
     inp = Input()
+
 # Input rms value
 rms = Follower(inp, freq=RMS_FREQ)
 rms_db = AToDB(rms)

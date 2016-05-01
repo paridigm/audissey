@@ -15,12 +15,12 @@ Bass = SNDS_PATH + '/bass_sample.wav'
 Hi_Hat = SNDS_PATH + '/hihat_sample.wav'
 Snare = SNDS_PATH + '/snare_sample.wav'
 
-print("poop")
+print("test")
 
 # initialize the table
 t = SndTable()
 
-print("poop2")
+print("test2")
 
 # populate the table with desired sounds and timings
 for elt in inputList:
@@ -35,10 +35,10 @@ for elt in inputList:
     else:
         t.insert(Snare, pos=elt[1])
 
-print("poop3")
+print("test3")
 
 # a = Osc(table=t, freq=t.getRate(), mul=.3).out()
 
-print("poop4")
+print("test4")
 
 s.gui(locals())
