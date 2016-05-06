@@ -1,44 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9b40b937-6816-436b-a90e-f8d5f5670b89" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/audissey/server/samples/bass_sample.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/audissey/server/samples/hihat_sample.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/audissey/server/samples/snare_sample.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/audissey/server/sounds/beat_boxing_sample.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/audissey/server/sounds/default.wav" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/audissey/server/pyo_playback.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pyo_scripts/callAfter_test.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pyo_scripts/sndFile_test.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/audissey/server/my_sounds/default.wav" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/audissey/server/my_sounds/beat_box_norm_sample.wav" afterPath="$PROJECT_DIR$/audissey/server/sounds/beat_box_norm_sample.wav" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/audissey/server/my_sounds/beat_boxing_sample.wav" afterPath="$PROJECT_DIR$/audissey/server/samples/beat_boxing_sample.wav" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/audissey/server/my_sounds/beatbox_sample3.wav" afterPath="$PROJECT_DIR$/audissey/server/sounds/beatbox_sample3.wav" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/audissey/server/my_sounds/beatbox_sample3_test.wav" afterPath="$PROJECT_DIR$/audissey/server/sounds/beatbox_sample3_test.wav" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/audissey/server/my_sounds/far.wav" afterPath="$PROJECT_DIR$/audissey/server/sounds/far.wav" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/audissey/server/my_sounds/fast_snares.wav" afterPath="$PROJECT_DIR$/audissey/server/sounds/fast_snares.wav" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/audissey/server/my_sounds/file.wav" afterPath="$PROJECT_DIR$/audissey/server/sounds/file.wav" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/audissey/server/my_sounds/fudgeyes.wav" afterPath="$PROJECT_DIR$/audissey/server/sounds/fudgeyes.wav" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/audissey/server/my_sounds/sunrun.wav" afterPath="$PROJECT_DIR$/audissey/server/sounds/sunrun.wav" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/audissey/server/my_sounds/sushi.wav" afterPath="$PROJECT_DIR$/audissey/server/sounds/sushi.wav" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/audissey/server/my_sounds/test.wav" afterPath="$PROJECT_DIR$/audissey/server/sounds/test.wav" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/audissey/server/my_sounds/th_kh.wav" afterPath="$PROJECT_DIR$/audissey/server/sounds/th_kh.wav" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/audissey/server/my_sounds/tom.wav" afterPath="$PROJECT_DIR$/audissey/server/sounds/lalala.wav" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/audissey/server/my_sounds/yeah.wav" afterPath="$PROJECT_DIR$/audissey/server/sounds/th_th_kh.wav" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/audissey/server/test/test_data.dat" afterPath="$PROJECT_DIR$/audissey/server/test/generated_test_data.dat" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/pyo_scripts/my_test.py" afterPath="$PROJECT_DIR$/pyo_scripts/time_sleep_test.py" />
+    <list default="true" id="9b40b937-6816-436b-a90e-f8d5f5670b89" name="Default" comment="Forgot to stage a few files... oops.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/audissey/server/samples/note_sample.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/audissey/server/samples/open_hihat_sample.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/audissey/server/samples/tom_sample.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/audissey/server/sounds/blown_beat.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/audissey/server/sounds/toms_beat.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pyo_scripts/samples/bass_sample.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pyo_scripts/samples/beat_boxing_sample.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pyo_scripts/samples/hihat_sample.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pyo_scripts/samples/snare_sample.wav" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/audissey/server/classifier.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/audissey/server/data/blown_beat_data.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/audissey/server/data/th_kh_data.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/audissey/server/data/th_th_kh_data.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/audissey/server/data/toms_beat2_data.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/audissey/server/data/toms_beat_data.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/audissey/server/data/user/bass.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/audissey/server/data/user/blown.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/audissey/server/data/user/blown_weka.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/audissey/server/data/user/tom_backup.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/audissey/server/data/user/tom_before_blow.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/audissey/server/util/tomML.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/audissey/server/data/_data_EZ.csv" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/audissey/server/sounds/default.wav" afterPath="$PROJECT_DIR$/audissey/server/sounds/default.wav" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/audissey/__TODO__.py" afterPath="$PROJECT_DIR$/audissey/__TODO__.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/audissey/main.py" afterPath="$PROJECT_DIR$/audissey/main.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/audissey/server/core.py" afterPath="$PROJECT_DIR$/audissey/server/core.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/audissey/server/data/default_data.csv" afterPath="$PROJECT_DIR$/audissey/server/data/default_data.csv" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/audissey/server/data/user/tom.csv" afterPath="$PROJECT_DIR$/audissey/server/data/user/tom.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/audissey/server/test/file_append_test.py" afterPath="$PROJECT_DIR$/audissey/server/test/file_append_test.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyo_scripts/attack_detector.py" afterPath="$PROJECT_DIR$/pyo_scripts/attack_detector.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyo_scripts/makeScore.py" afterPath="$PROJECT_DIR$/pyo_scripts/makeScore.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyo_scripts/my_record.py" afterPath="$PROJECT_DIR$/pyo_scripts/my_record.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyo_scripts/pattern_test.py" afterPath="$PROJECT_DIR$/pyo_scripts/pattern_test.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyo_scripts/pyo_onset_trigger_sin.py" afterPath="$PROJECT_DIR$/pyo_scripts/pyo_onset_trigger_sin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pyo_scripts/score_test.py" afterPath="$PROJECT_DIR$/pyo_scripts/score_test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/audissey/server/pyo_playback.py" afterPath="$PROJECT_DIR$/audissey/server/pyo_playback.py" />
     </list>
     <ignored path="HelloAudio.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -62,8 +54,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/audissey/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.22072937">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
                 <element signature="e#0#65#0" expanded="true" />
               </folding>
@@ -95,13 +87,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../HelloAudio/todo.py" />
-        <option value="$PROJECT_DIR$/todo.py" />
-        <option value="C:/Python27/Lib/hashlib.py" />
-        <option value="$USER_HOME$/Desktop/my_pyo_examples/sequencing/02_random_score.py" />
-        <option value="$PROJECT_DIR$/pyo_scripts/pyo_input_fader.py" />
-        <option value="$PROJECT_DIR$/python35/example.py" />
-        <option value="$PROJECT_DIR$/python35/main.py" />
         <option value="$PROJECT_DIR$/python35/features/base.py" />
         <option value="$PROJECT_DIR$/python35/feature_utils.py" />
         <option value="$PROJECT_DIR$/server/example.py" />
@@ -128,7 +113,6 @@
         <option value="$PROJECT_DIR$/audissey/server/data/default_data_EZ_labled.csv" />
         <option value="$PROJECT_DIR$/audissey/server/test/test_data.dat" />
         <option value="$PROJECT_DIR$/pyo_scripts/my_test.py" />
-        <option value="$PROJECT_DIR$/audissey/server/data/user/tom.csv" />
         <option value="$PROJECT_DIR$/audissey/context.py" />
         <option value="$PROJECT_DIR$/pyo_scripts/score_test.py" />
         <option value="$PROJECT_DIR$/pyo_scripts/makeScore.py" />
@@ -144,16 +128,24 @@
         <option value="$PROJECT_DIR$/audissey/server/test/file_append_test.py" />
         <option value="$PROJECT_DIR$/audissey/server/test/generated_test_data.dat" />
         <option value="$PROJECT_DIR$/audissey/server/pyo_playback.py" />
+        <option value="$PROJECT_DIR$/audissey/server/data/user/bob.csv" />
+        <option value="$PROJECT_DIR$/audissey/server/data/user/bass.csv" />
+        <option value="$PROJECT_DIR$/audissey/server/data/blown_beat_data.csv" />
+        <option value="$PROJECT_DIR$/audissey/server/data/user/boots.csv" />
+        <option value="$PROJECT_DIR$/audissey/server/data/user/blown_test.csv" />
+        <option value="$PROJECT_DIR$/audissey/server/util/tomML.py" />
+        <option value="$PROJECT_DIR$/audissey/server/data/user/tom.csv" />
         <option value="$PROJECT_DIR$/audissey/main.py" />
+        <option value="$PROJECT_DIR$/audissey/server/classifier.py" />
         <option value="$PROJECT_DIR$/audissey/server/core.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-11" />
-    <option name="y" value="-11" />
-    <option name="width" value="1942" />
-    <option name="height" value="1042" />
+    <option name="x" value="5" />
+    <option name="y" value="7" />
+    <option name="width" value="1908" />
+    <option name="height" value="969" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -216,8 +208,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -241,23 +233,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.main">
-    <configuration default="false" name="sndFile_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pyo_scripts" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Audissey1" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyo_scripts/sndFile_test.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="playback_transcription" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -322,6 +297,23 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Audissey1" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/audissey/server/test/file_append_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="classifier" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/audissey/server" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Audissey1" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/audissey/server/classifier.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
@@ -449,19 +441,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.sndFile_test" />
-      <item index="1" class="java.lang.String" itemvalue="Python.playback_transcription" />
-      <item index="2" class="java.lang.String" itemvalue="Python.callAfter_test" />
-      <item index="3" class="java.lang.String" itemvalue="Python.main" />
-      <item index="4" class="java.lang.String" itemvalue="Python.file_append_test" />
+      <item index="0" class="java.lang.String" itemvalue="Python.playback_transcription" />
+      <item index="1" class="java.lang.String" itemvalue="Python.callAfter_test" />
+      <item index="2" class="java.lang.String" itemvalue="Python.main" />
+      <item index="3" class="java.lang.String" itemvalue="Python.file_append_test" />
+      <item index="4" class="java.lang.String" itemvalue="Python.classifier" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.main" />
-        <item index="1" class="java.lang.String" itemvalue="Python.file_append_test" />
-        <item index="2" class="java.lang.String" itemvalue="Python.playback_transcription" />
-        <item index="3" class="java.lang.String" itemvalue="Python.callAfter_test" />
-        <item index="4" class="java.lang.String" itemvalue="Python.sndFile_test" />
+        <item index="1" class="java.lang.String" itemvalue="Python.classifier" />
+        <item index="2" class="java.lang.String" itemvalue="Python.file_append_test" />
+        <item index="3" class="java.lang.String" itemvalue="Python.playback_transcription" />
+        <item index="4" class="java.lang.String" itemvalue="Python.callAfter_test" />
       </list>
     </recent_temporary>
   </component>
@@ -518,7 +510,19 @@
       <option name="project" value="LOCAL" />
       <updated>1461268614263</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="added pyo playback. only plays a single sound, but is easily adjustable in core.playback_with_pyo().">
+      <created>1462077123370</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1462077123370</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Forgot to stage a few files... oops.">
+      <created>1462077231184</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1462077231184</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView">
@@ -531,19 +535,19 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
-    <editor active="true" />
+    <frame x="5" y="7" width="1908" height="969" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16905141" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2185645" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32996207" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298122" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30214918" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34430084" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46341464" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32996207" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49557522" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4947121" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -573,7 +577,9 @@
     <MESSAGE value="Nothing changed...." />
     <MESSAGE value="Transferring to numpy/scipy for audio processing in non-realtime.  see python35/main" />
     <MESSAGE value="Moved signal processing and machine learning to server/core.py. Added a text-based user interface. All features are being saved to csv files." />
-    <option name="LAST_COMMIT_MESSAGE" value="Moved signal processing and machine learning to server/core.py. Added a text-based user interface. All features are being saved to csv files." />
+    <MESSAGE value="added pyo playback. only plays a single sound, but is easily adjustable in core.playback_with_pyo()." />
+    <MESSAGE value="Forgot to stage a few files... oops." />
+    <option name="LAST_COMMIT_MESSAGE" value="Forgot to stage a few files... oops." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -584,88 +590,11 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="44" />
+      <option name="time" value="58" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/audissey/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/site-packages/pyaudio.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33251533">
-          <caret line="129" column="0" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/audissey/server/test/examples/syntax_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6895075">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/threading.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21813725">
-          <caret line="762" column="0" selection-start-line="762" selection-start-column="0" selection-end-line="762" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/site-packages/matplotlib/pyplot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7941176">
-          <caret line="667" column="4" selection-start-line="667" selection-start-column="4" selection-end-line="667" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/audissey/server/data/beatbox_sample3_test_data_EZ.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/audissey/server/util/features/sigproc.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.3488064">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/audissey/server/util/features/base.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.0809019">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/audissey/server/util/onsetdetect_hfc.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/audissey/client/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16312057">
-          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/audissey/server/data/beatbox_sample3_data_EZ.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/Python27/Lib/site-packages/numpy/core/_methods.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33202356">
@@ -719,7 +648,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="4" column="7" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -748,7 +676,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.706334">
           <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -756,7 +683,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4856046">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -764,7 +690,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -772,7 +697,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.61804223">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -780,7 +704,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -788,7 +711,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.044145875">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -796,7 +718,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -804,7 +725,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="64" column="13" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -812,17 +732,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.19193858">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/site-packages/pyolib/_core.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1919386">
-          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-          <folding>
-            <element signature="e#770#896#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -830,7 +739,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4856046">
           <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -838,7 +746,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.044145875">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -846,7 +753,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.044145875">
           <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -854,7 +760,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -862,7 +767,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="4.28215">
           <caret line="98" column="19" selection-start-line="98" selection-start-column="4" selection-end-line="98" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -870,7 +774,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1765835">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -878,7 +781,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7946257">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -886,7 +788,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.57389635">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -894,7 +795,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -902,7 +802,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13243762">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -910,7 +809,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13243762">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -918,7 +816,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.22072937">
           <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -926,7 +823,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.91170824">
           <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -934,7 +830,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33205375">
           <caret line="93" column="8" selection-start-line="93" selection-start-column="8" selection-end-line="93" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -942,42 +837,118 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.08829175">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="19" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/audissey/server/data/exit_data.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4856046">
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/pyolib/_core.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33193278">
+          <caret line="394" column="0" selection-start-line="394" selection-start-column="0" selection-end-line="394" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/audissey/server/pyo_playback.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26487523">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#17#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="42" column="17" selection-start-line="42" selection-start-column="17" selection-end-line="42" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/audissey/server/core.py">
+    <entry file="file://C:/Python27/Lib/site-packages/sklearn/svm/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="520" column="0" selection-start-line="520" selection-start-column="0" selection-end-line="520" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/audissey/server/data/user/bass.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/numpy/lib/_datasource.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33271027">
+          <caret line="150" column="0" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/audissey/server/data/user/blown.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.90836656">
+          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/audissey/server/data/blown_beat_data.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36653388">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/audissey/server/util/tomML.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.75738394">
+          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/audissey/server/data/user/tom_before_blow.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.6012658">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/audissey/server/data/default_data.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#690#796#1" expanded="false" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/numpy/core/fromnumeric.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33246753">
+          <caret line="2262" column="0" selection-start-line="2262" selection-start-column="0" selection-end-line="2262" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/audissey/server/classifier.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45238096">
+          <caret line="625" column="2" selection-start-line="625" selection-start-column="2" selection-end-line="625" selection-end-column="2" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/audissey/server/data/user/tom.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.73512477">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="11.462047">
+          <caret line="302" column="0" selection-start-line="302" selection-start-column="0" selection-end-line="302" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/audissey/server/core.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37604457">
+          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/audissey/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22072937">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#0#65#0" expanded="true" />
           </folding>

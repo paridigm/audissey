@@ -17,12 +17,16 @@ import numpy as np                      # plotting waveforms
 import pyaudio                          # playback
 import scipy.signal as signal           # smoothing
 from scipy.io import wavfile
+import os.path
 
-import pyo_playback
+import pyo_playback                     # instrument playback
+import classifier
 
 from util import signal_utils as su       # fix for spyder
 from util import feature_utils as fu      # ""
 from util import onsetdetect_hfc as odhf  # ""
+
+import classifier
 
 '''
 import util.signal_utils as su
@@ -38,9 +42,9 @@ gen_plots = False
 stop_rec = False
 
 # sounds variables
-snds_path = "./sounds/"           # location of sample wav files
-data_path = "./data/"                # location of training data
-user_data_path = "./data/user/"       # location of training data
+snds_path = "./sounds/"             # location of sample wav files
+data_path = "./data/"               # location of data from files
+user_data_path = "./data/user/"     # location of user data
 user = None
 file_str = None                      # file to open
 
@@ -54,8 +58,8 @@ sig = None                  # signal
 s_smooth = None             # smoothed signal
 
 # peak detector vars
-thresh_env = 400            # threshold for new onset to be detected
-cutoff = 50                 # size of smoothing window
+thresh_env = 1100            # threshold for new onset to be detected
+cutoff = 50                  # size of smoothing window
 peaks = []          # peaks final
 peaks_env = []      # peaks from my algo
 peaks_hfc = []      # peaks from high frequency content
@@ -107,7 +111,9 @@ def set_default_path(rel_path, pyo_server):
     # initialize pyo_plaback lib
     pyo_playback.load_samples_from([rel_path + "samples/bass_sample.wav",
                                     rel_path + "samples/hihat_sample.wav",
-                                    rel_path + "samples/snare_sample.wav"])
+                                    rel_path + "samples/snare_sample.wav",
+                                    rel_path + "samples/open_hihat_sample.wav",
+                                    rel_path + "samples/note_sample.wav",])
 
 
 def set_data_path(data_path_str): # set data path only
@@ -126,8 +132,10 @@ def set_snd_path(snd_path_str): # set sound path only
 
 
 def set_user(user_name):
-    global user
+    global user, user_data_path
     user = user_name
+    if(os.path.exists(user_data_path + user + ".csv")):
+        print("Training data found for " + user)
 
 
 def get_snd_path():
@@ -286,14 +294,17 @@ def save_unclassified_data():
 def save_user_training_data(class_training):
     global X, user_data_path
 
-    # set data to desired class
+    # set desired class for the data
     X_cls = np.column_stack( (np.full(np.shape(X)[0], class_training, dtype=np.int), X) )
 
     # append to tom training data
-    f=open( get_user_data_path() + get_user() + ".csv",'ab')
+    f = open( get_user_data_path() + get_user() + ".csv",'ab')
     np.savetxt(f, X_cls, fmt='%10f', delimiter='\t')
     f.write("\n")
     f.close()
+
+    # retrain the machine...
+
 
 
 """ saves a new wav file appropiately """
@@ -491,9 +502,44 @@ def show_visual():
         plt.show()
 
 
-def classify():
+def get_data_and_retrain():
+    global user_data_path
+
+    # if user training data unavailable, throw error. This means user didn't bother training.
+    if(not os.path.exists(user_data_path + user + ".csv")):
+        print("NO TRAINING DATA AVIALABLE. PLEASE TRAIN SOME CLASSES")
+        return
+
+    # refresh user data
+    classifier.get_data_from(user_data_path + user + ".csv")
+
+    # block training from happening --> the svm breaks with a single class
+    if( len(classifier.c_classes) <= 1):
+        print("Please train more classes: at least 2 classes required")
+        return
+
+    # use normalization (have to do this for the svm for some reason)
+    classifier.use_normalization_and_normalize_training_data()
+
+    # set classifier type
+    classifier.set_classifier(classifier.c_svm_rbf)
+
+     # train classifier (no inputs no offsets/biases)
+    classifier.train()
+
+
+def classify_input():
     global X, d, user_data_path
-    return
+
+    # if user training data unavailable, throw error. This means user didn't bother training.
+    if(not os.path.exists(user_data_path + user + ".csv") or len(classifier.c_classes) <= 1):
+        print("NO PROPER TRAINING DATA AVIALABLE. PLEASE TRAIN.")
+        return
+
+    # get class labels
+    d = classifier.classify(X)
+
+    print(d)
 
 
 """ pyo playback function """
@@ -503,9 +549,10 @@ def playback_with_pyo():
     # scale peaks to time-domain
     peaks_time_scaled = [ float(x)/fs for x in peaks]
 
-    # check if data is legitimate
+    # check if data is legitimate (if I forgot to call classify())
     if(len(d) != len(peaks)):
-        d = [1]*len(peaks)
+        print( "CLASSIFIER DID NOT CLASSIFY. Setting all to class 0" )
+        d = [0]*len(peaks)
 
     print("playing back with pyo")
     print(d)

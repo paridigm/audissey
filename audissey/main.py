@@ -1,8 +1,8 @@
 import context  # for spyder... since the project dir isn't known
 import os.path
 import server as auds
-import threading
 from pyo import *
+import threading
 
 # pyo had to be instanitated in main
 pyo_server = Server().boot()
@@ -24,7 +24,7 @@ current_file = None
 user = raw_input("Enter user name : ")
 user = "default" if(user == '') else user
 auds.set_user(user)
-
+auds.get_data_and_retrain()
 
 # command line gui for now
 while(not done):
@@ -60,6 +60,7 @@ while(not done):
         # playback the transcribed audio after actual playback (blocking function)
         auds.playback_with_pyo()
 
+        # go back to top
         continue
 
     # if file doesn't exist or recording new wav...
@@ -85,31 +86,38 @@ while(not done):
     # playback
     playback_thread = threading.Thread(target=auds.playback)
     playback_thread.start()
-    print("playback started")
+    print("\nplayback started")
 
     # segment and extract features
     auds.process()
 
-    # save data
-    auds.save_unclassified_data()
-    print("***data saved ***")
+    # save data if data is not already there
+    if( ans == "default" or not os.path.exists( auds.get_data_path() + ans + "_data.csv" ) ):
+        auds.save_unclassified_data()
+        print("***data saved ***")
+
+    # start a plot thread (ok to re-create... only the first thread will stay alive forever)
+    vis_thread = threading.Thread(target=auds.show_visual)
+    vis_thread.start()
 
     if(class_training != None):
         #training
         auds.save_user_training_data(class_training)
+        auds.get_data_and_retrain()
     else:
         #jamming - classify by uploading the training data
         pass
 
+    # classify each sound (for both training and jamming)
+    auds.classify_input()
+
+    # wait until playback is done
     while( playback_thread.isAlive() ):
             pass
 
-    # playback the transcribed audio after actual playback
+    # playback the transcribed audio after actual playback (blocking)
     auds.playback_with_pyo()
 
-    # start a plot thread (ok to recreate... only the first thread will actually stay alive forever)
-    vis_thread = threading.Thread(target=auds.show_visual)
-    vis_thread.start()
 
 
 #end while, main loop

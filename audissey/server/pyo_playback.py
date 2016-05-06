@@ -23,7 +23,7 @@ def load_samples_from(samples_list):
 def play_song(notes, onsets):
     global pyo_calls, pyo_s
 
-    # starting and stopping the pyo server in case it uses pyaudio
+    # starting and stopping the pyo server in case it blocks pyaudio
     pyo_s.start()
 
     pyo_calls = [None] * len(onsets)
@@ -37,8 +37,13 @@ def play_song(notes, onsets):
 
 
 def play_snd(index):
-    print(index)
-    pyo_samples[index].out()
+    global pyo_samples
+    if(index >= len(pyo_samples)):                          # check error
+        print(str(index) + " NOT AN AUDIO SAMPLE. Replacing with class 0.")
+        index = 0
+    else:
+        print(index)
+    pyo_samples[index].out()                                # callback fxn
 
 
 # local main function for testing
